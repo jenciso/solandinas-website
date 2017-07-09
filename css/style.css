@@ -1,0 +1,970 @@
+@font-face{
+	src: url('fonts/Nexa-Bold.otf');
+	font-family: 'Nexa-Bold';
+	font-weight: 100;
+}
+@font-face{
+	src: url('fonts/Nexa-Light.otf');
+	font-family: 'Nexa-Light';
+	font-weight: 100;
+}
+@font-face {
+	font-family: 'Open Sans Condensed';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Open Sans Condensed Bold'), local('OpenSans-CondensedBold'), url(https://fonts.gstatic.com/s/opensanscondensed/v10/gk5FxslNkTTHtojXrkp-xIgEy7irt_A5K-aDq9kG7DHr7w4p9aSvGirXi6XmeXNA.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+body{
+	margin: 0;
+	background: #0f548c;
+	font-family: 'Nexa-Light';
+	font-size: 15px;
+}
+input:focus, a:focus, button:focus, textarea:focus{
+	outline: 0;
+}
+#wrapper{
+	min-width: 1100px;
+	max-width: 1100px;
+}
+.center, .columns{
+	display: flex;
+	justify-content: center;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+header{
+	text-transform: uppercase;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: rgba(0,0,0,.5);
+}
+header div.columns{
+	align-items: center;
+}
+header div article:first-child{
+	max-width: 220px;
+}
+header div article:first-child img{
+	width: 100%;
+}
+header div article:last-child{
+	width: calc(100% - 220px);
+	display: flex;
+	justify-content: flex-end;
+}
+input.btnmenu, div.btn-menu{
+	display: none;
+}
+ul#menu{
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+ul#menu a{
+	color: #fff;
+	font-family: 'Nexa-Bold';
+	padding: 0 10px;
+	border-right: solid 2px #fff;
+}
+ul#menu li:last-child a{
+	border: none;
+}
+#banner{
+	background: #000 url('../img/banner.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 250px 0 150px 0;
+	text-align: center;
+	text-transform: uppercase;
+	animation: 5s slider infinite;
+}
+@keyframes slider{
+    0%, 30%, 100%{
+        background: #000 url('../img/banner.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    40%, 60%{
+    	background: #000 url('../img/banner-soldador-sa.png');
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	background-size: cover;
+    }
+    70%, 90%{
+    	background: #000 url('../img/header/sa-garantia.jpg');
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	background-size: cover;
+    }
+}
+#banner h1{
+	font-family: 'Open Sans Condensed';
+	color: #fff;
+	font-size: 55px;
+	line-height: 45px;
+	text-shadow: 0 0 20px #000;
+	margin: 0;
+}
+#banner p{
+	background: rgba(0,0,0,.7);
+	padding: 10px 20px;
+	color: #fff;
+	font-size: 28px;
+	margin: 5px 0;
+}
+#banner article:last-child{
+	background: transparent;
+	padding: 0;
+}
+.title h3{
+	font-family: 'Nexa-Bold';
+	font-size: 25px;
+	text-transform: uppercase;
+	padding: 20px 0;
+	margin: 0;
+	color: #fff;
+}
+section article:last-child{
+	background: #fff;
+	padding: 40px 0;
+	text-transform: uppercase;
+	color: #0f548c;
+}
+#brands article:last-child li{
+	align-items: center;
+	flex: 1;
+	border-right: solid 2px #0f548c;
+}
+#brands article:last-child li:last-child{
+	border: none;
+}
+#brands article:last-child li img{
+	height: 80px;
+}
+#products article:last-child ul{
+	flex: 1;
+	text-transform: initial;
+}
+#products article:last-child ul li{
+	margin: 0 0 20px 0;
+	display: flex;
+	align-items: center;
+}
+#products article:last-child ul li img{
+	max-width: 40px;
+	margin: 0 15px 0 0;
+}
+#products article:last-child ul a{
+	color: #0f548c;
+	font-size: 22px;
+	border-bottom: solid 2px #0f548c;
+}
+#allproducts a{
+	color: #0f548c;
+}
+#allproducts div.prod{
+	margin: 0 20px 0 0;
+	width: calc(100%/3.2);
+	max-width: calc(100%/3.2);
+	display: inline-block;
+	vertical-align: bottom;
+}
+#allproducts div.prodfour{
+	width: calc(100%/4.4);
+	max-width: calc(100%/4.4);
+}
+#allproducts div.img{
+	border: solid 2px #0f548c;
+	padding: 10px;
+	margin: 0 0 20px 0;
+	max-height: 250px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	overflow: hidden;
+}
+#allproducts div.img img{
+	height: 220px;
+	position: relative;
+}
+#allproducts div.prodfour div.img img{
+	height: 180px;
+}
+/*#allproducts div.content{
+	width: 100%;
+	border-top: solid 2px #0f548c;
+	border-bottom: solid 2px #0f548c;
+	padding: 10px 0;
+}*/
+#allproducts div.img o{
+	position: absolute;
+	margin: 205px 0 0 120px;
+}
+#allproducts div.prodfour div.img o{
+	margin: 170px 0 0 75px;
+}
+#allproducts div.content{
+	width: calc(100% - 20px);
+	background: #0f548c;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	justify-content: flex-end;
+}
+#allproducts div.content p, #allproducts div.content h3{
+	margin: 0;
+}
+#allproducts div.content h3{
+	margin: 5px 0 0 0;
+	font-size: 25px;
+}
+#allproducts div.prodfour div.content h3{
+	font-size: 20px;
+}
+#psale article:last-child{
+	padding: 0;
+}
+#psale article:last-child div.columns{
+	align-items: center;
+}
+#psale article:last-child div.image{
+	margin: 0 20px 0 0;
+	width: 500px;
+	height: 470px;
+	/*background: url(../img/soldador.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;*/
+}
+#psale article:last-child div.image img{
+	height: 470px;
+	position: absolute;
+	left: 0;
+}
+#psale article:last-child div:last-child{
+	width: calc(100% - 320px);
+}
+#psale article:last-child h1{
+	font-family: 'Open Sans Condensed';
+	font-size: 50px;
+	margin: 0;
+}
+#psale article:last-child p{
+	font-size: 20px;
+}
+ul#menu-country{
+	border: solid 1px #0f548c;
+	max-width: 350px;
+}
+ul#menu-country li.select{
+	padding: 10px;
+}
+ul#menu-country li.select i{
+	margin: 0 0 0 215px;
+	transition: all .5s;
+}
+ul#submenu-country{
+	max-height: 300px;
+	overflow: overlay;
+	position: absolute;
+	background: #fff;
+	width: 200px;
+	border: solid 1px #0f548c;
+	margin: 10px 0 0 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 9;
+	transition: all .5s;
+}
+ul#submenu-country li a{
+	height: 40px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 20px;
+	color: #0f548c;
+	transition: all .5s;
+}
+ul#submenu-country li a:hover{
+	background: rgba(0,0,0,.1);
+}
+input.btncountry{
+	width: 352px;
+	height: 39px;
+	margin: 0;
+	border: none;
+	position: absolute;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+}
+.btncountry[type="checkbox"]:checked ~ ul#menu-country li.select i{
+	transform: rotate(180deg);
+}
+.btncountry[type="checkbox"]:checked ~ ul#menu-country ul#submenu-country{
+	opacity: 1;
+	visibility: visible;
+}
+#contact div#wrapper{
+	align-items: center;
+}
+#contact article:last-child{
+	text-transform: initial;
+}
+#contact article:last-child div.columns div{
+	flex: 1;
+	font-size: 20px;
+}
+#contact article:last-child div.columns div a{
+	color: #0f548c;
+}
+/*#contact article:last-child div.columns div a p{
+    font-weight: bolder;
+}*/
+#contact article:last-child i{
+	border-radius: 100%;
+	background: #0f548c;
+	color: #fff;
+	padding: 10px;
+	font-size: 20px;
+	text-align: center;
+	width: 20px;
+}
+#contact article:last-child p.second{
+	font-size: 15px;
+}
+#contact div#wrapper div:last-child div{
+	display: flex;
+	justify-content: center;
+}
+#contact div#wrapper div:last-child ul{
+	text-transform: initial;
+	text-align: center;
+}
+#contact div#wrapper div:last-child ul li:last-child{
+	font-size: 16px;
+	margin: 10px 0 20px 0
+}
+#contact div#wrapper div:last-child div iframe{
+	width: 350px;
+	height: 350px;
+}
+footer{
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 20px 0;
+}
+footer li{
+	margin: 0 0 10px 0;
+}
+footer li:first-child{
+	text-transform: capitalize;
+}
+footer li:last-child{
+	margin: 0;
+	text-transform: initial;
+}
+footer a{
+	color: #fff;
+}
+/* -- OTHER PAGES -- */
+#header{
+	width: 100%;
+	text-align: center;
+	padding: 300px 0 250px 0;
+}
+#header article:last-child{
+	background: transparent;
+	padding: 0;
+	color: #fff;
+}
+.head{
+	font-family: 'Open Sans Condensed';
+	color: #fff;
+	font-size: 40px;
+	text-shadow: 0 0 20px #000;
+	text-transform: uppercase;
+	margin: 0;
+}
+.head-about{
+	background: url('../img/header/sa-about.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.head-garantia{
+	background: url('../img/header/sa-garantia.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#text article:last-child{
+	font-size: 18px;
+	line-height: 22px;
+	text-transform: initial;
+}
+#text div.history div.img{
+	width: 400px;
+	height: 350px;
+	background: #000 url(../img/about.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+}
+#text div.history div:first-child{
+	max-width: calc(100% - 400px);
+}
+#text div.garant{
+	align-items: center;
+	justify-content: flex-start;
+}
+#text div.garant i{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #0f548c;
+	color: #fff;
+	font-size: 25px;
+	border-radius: 100%;
+	margin: 0 10px 0 0;
+}
+#text div.garant h3{
+	font-size: 22px;
+	margin: 0;
+	text-transform: uppercase;
+}
+#text hr{
+	margin: 40px 0;
+}
+section#bannersecond{
+	height: 400px;
+	width: 100%;
+	background: #000 url(../img/banner-soldador-sa.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+section#details article:last-child div.img{
+	max-width: 350px;
+	margin: 0 50px 0 0;
+}
+section#details article:last-child div.img img{
+	width: 100%;
+}
+section#details article:last-child div.text{
+	width: calc(100% - 400px);
+	text-transform: initial;
+}
+section#details article:last-child div.text h1{
+	font-size: 25px;
+}
+section#details article:last-child img.tablas{
+    width: auto;
+    height: 400px;
+    /*position: relative;
+    left: calc(50% - 200px);*/
+}
+section#details article:last-child img.tablas-mig{
+    height: 270px;
+}
+section#details article:last-child img.tablas-cargadores{
+    height: 220px;
+}
+section#details article:last-child img.tablas-second{
+    height: 265px;
+}
+section#details article:last-child img.tabla-inferior{
+    max-width: 700px;
+    margin: 0 0 20px 0;
+    left: 0;
+    height: 93px;
+}
+.head-pventa{
+	background: url('../img/header/sa-pventas.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#psale article:last-child div.direction-details h1{
+	margin: 0 0 10px 0;
+}
+#psale article div.column-01{
+	flex: 1;
+}
+#psale article:last-child div.direction{
+	width: 100%;
+	max-height: 400px;
+	overflow: overlay;
+	margin: 0 0 20px 0;
+	color: gray;
+	font-size: 16px;
+	text-transform: initial;
+}
+#psale article:last-child div.direction o{
+	color: #0f548c;
+	font-family: 'Nexa-Bold';
+}
+#psale div.direction ul li:first-child o{
+	font-size: 20px;
+}
+#psale div.direction ul{
+	margin: 0 0 20px 0;
+}
+#psale div.direction ul li{
+	margin: 0 0 5px 0;
+}
+#psale article:last-child div.direction-details div:last-child img{
+	height: 200px;
+}
+.head-contact{
+	background: url('../img/header/sa-contact.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#contact input, #contact textarea{
+	width: calc(100% - 20px);
+	padding: 10px;
+	border: none;
+	border-bottom: solid 1px #000;
+	margin: 0 0 20px 0;
+	font-size: 15px;
+}
+#contact textarea{
+	max-width: calc(100% - 20px);
+	height: 120px;
+	max-height: 120px;
+}
+#contact button{
+	width: 100%;
+	background: #0f548c;
+	color: #fff;
+	border: none;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin: 0 0 30px 0;
+}
+section#bannersoldier{
+	height: 400px;
+	width: 100%;
+	background: #000 url(../img/header/sa-soldier.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+section#bannersolandinas{
+	height: 400px;
+	width: 100%;
+	background: #000 url(../img/header/sa-solandinas.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.title-second-gray{
+	display: flex;
+	justify-content: flex-start;
+	background: rgba(0,0,0,.3);
+	color: #fff;
+	padding: 10px 0 10px 10px;
+	margin: 20px 0;
+}
+.title-second-gray h4{
+	margin: 0;
+	text-transform: uppercase;
+}
+.somos-sa article:first-child{
+	background: #0c4a95;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 200px;
+	margin: 0 10px 0 0;
+}
+.somos-sa article:last-child{
+	background: #002968;
+	color: #fff;
+	padding: 10px;
+}
+.somos-sa article:last-child p{
+	flex: 1;
+	margin: 0 10px;
+	font-size: 13px;
+	line-height: 14px;
+}
+.carusel-sa-img{
+	width: 100%;
+	height: auto;
+}
+.carusel-sa-img img{
+	height: auto;
+	width: 100%;
+}
+.pilares{
+	border-top: dotted 2px #002968;
+	padding: 20px 0 0 0;
+}
+.pilares div{
+	flex: 1;
+}
+.pilares div:first-child{
+	max-width: 370px;
+	margin: 0 20px 0 0;
+}
+.pilares div img{
+	width: 100%;
+}
+.pilares div:last-child{
+	display: flex;
+	justify-content: flex-end;
+}
+.pilares div:last-child img{
+	width: auto;
+	height: 500px;
+}
+a.btn-ficha{
+    background: orange;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    width: 150px;
+    text-transform: uppercase;
+}
+#tablas{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn-fichatecnica{
+    justify-content: flex-end;
+    margin: 20px 0 0 0;
+}
+/* -- RESPONSIVE -- */
+@media screen and (max-width: 1200px){
+	#wrapper{
+		min-width: 850px;
+		max-width: 850px;
+	}
+	#psale article:last-child div.image{
+		width: 300px;
+		height: 370px;
+	}
+	ul#menu{
+		font-size: 13px;
+	}
+	ul#menu a{
+		padding: 0 6px;
+	}
+	header div article:first-child{
+		max-width: 130px;
+	}
+	header div article:last-child{
+		width: calc(100% - 130px);
+	}
+	.carusel-sa-img{
+		width: 100%;
+		height: 300px;
+		overflow: overlay;
+	}
+	.carusel-sa-img img{
+		height: 100%;
+		width: auto;
+	}
+	#allproducts div.prod{
+		width: calc(100%/3.3);
+		max-width: calc(100%/3.3);
+	}
+	#allproducts div.content h3{
+		font-size: 15px;
+	}
+	#allproducts div.img o{
+		margin: 140px 0 0 85px;
+	}
+	#allproducts div.prodfour{
+		width: calc(100%/4.5);
+		max-width: calc(100%/4.5);
+	}
+	#allproducts div.prodfour div.content h3{
+		font-size: 15px;
+	}
+	#allproducts div.img img{
+		height: 150px;
+	}
+	#allproducts div.prodfour div.img img{
+		height: 140px;
+	}
+	#allproducts div.prodfour div.img o{
+		margin: 130px 0 0 50px;
+	}
+	#psale article:last-child div.image img{
+		height: 370px;
+	}
+	section#details article:last-child img.tablas{
+	    left: 0;
+	    width: 100%;
+	    max-width: 100%;
+	    display: flex;
+	    height: inherit;
+	}
+    #tablas{
+        display: block;
+    }
+}
+@media screen and (max-width: 870px){
+	input.btnmenu, div.btn-menu{
+		display: block;
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-o-appearance: none;
+		background: transparent;
+		position: fixed;
+		top: 0;
+		right: 10px;
+		width: 150px;
+		height: 40px;
+		margin: 0;
+		z-index: 9999;
+		transition: all .5s;
+	}
+	div.btn-menu{
+		background: #0f548c;
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 999;
+	}
+	div.btn-menu i{
+		margin: 0 10px 0 0;
+	}
+	div.btn-menu i:last-child{
+		display: none;
+	}
+	ul#menu{
+		display: block;
+		position: fixed;
+		width: 220px;
+		height: 100vh;
+		background: rgba(0,0,0,.6);
+		right: -220px;
+		top: 0;
+		transition: all .5s;
+		z-index: 99;
+	}
+	ul#menu li{
+		width: 100%;
+		height: 50px;
+	}
+	ul#menu li:first-child{
+		margin-top: 50px;
+	}
+	ul#menu a{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 100%;
+		padding: 0 20px;
+		text-align: left;
+		border: none;
+		background: transparent;
+		transition: all .5s;
+	}
+	ul#menu a:hover{
+		color: #0f548c;
+		background: rgba(255,255,255,.8);
+	}
+	.btnmenu[type="checkbox"]:checked{
+		right: 0;
+		width: 220px;
+		height: 50px;
+	}
+	.btnmenu[type="checkbox"]:checked ~ div.btn-menu{
+		right: 0;
+		width: 220px;
+		height: 50px;
+	}
+	.btnmenu[type="checkbox"]:checked ~ div.btn-menu i{
+		display: none;
+	}
+	.btnmenu[type="checkbox"]:checked ~ div.btn-menu i:last-child{
+		display: block;
+	}
+	.btnmenu[type="checkbox"]:checked ~ ul#menu{
+		right: 0;
+	}
+	#wrapper{
+		min-width: calc(100% - 40px);
+		max-width: calc(100% - 40px);
+		padding: 0 20px;
+	}
+	header div article:first-child{
+		max-width: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	header div article:first-child img{
+		width: auto;
+		height: 120px;
+	}
+	header div article:last-child{
+		position: absolute;
+	}
+	#brands article:last-child li img{
+		height: 50px;
+	}
+	#ubicanos iframe{
+		height: 300px;
+	}
+	#allproducts div.prod{
+		display: block;
+		width: 100%;
+		max-width: 100%;
+	}
+	#allproducts div.img img{
+		height: 200px;
+	}
+	#allproducts div.img o{
+		margin: 190px 0 0 calc(50% - 65px);
+	}
+	#allproducts div.prodfour div.img o{
+		margin: 130px 0 0 calc(50% - 65px);
+	}
+	#details article:last-child div#wrapper, #details #wrapper div.center, #details #wrapper div.columns, .somos-sa, .pilares, .pilares div:last-child{
+	    display: block;
+	}
+	#details article:last-child div#wrapper div.img{
+	    display: flex;
+	    justify-content: center;
+	    max-width: 100%;
+	    width: 100%;
+	}
+	#details article:last-child div#wrapper div.img img{
+	    height: 300px;
+	    width: auto;
+	}
+	#details article:last-child div#wrapper div.text, section#details article:last-child div.img, section#details article:last-child div.text, .somos-sa article:first-child, .pilares div:first-child, .pilares div:last-child img{
+	    width: 100%;
+	    max-width: 100%;
+	}
+	.somos-sa article:first-child{
+	    margin: 0;
+	}
+	.pilares{
+	    overflow: hidden;
+	}
+	.pilares div:last-child img{
+	    height: auto;
+	}
+}
+@media screen and (max-width: 800px){
+	#products article:last-child ul a, #psale article:last-child p, #contact article:last-child div.columns div{
+		font-size: 15px;
+	}
+	ul#menu-country li.select i{
+		margin: 0 0 0 200px;
+	}
+	#text div.history{
+		display: block;
+	}
+	#text div.history div.img{
+		width: 100%;
+		height: 400px;
+	}
+	#text div.history div:first-child{
+		max-width: 100%;
+	}
+	.somos-sa .columns{
+	    display: block;
+	}
+	.somos-sa article:last-child p{
+	    margin: 10px;
+	}
+}
+@media screen and (max-width: 700px){
+	#banner{
+		padding: 200px 0 80px 0;
+	}
+	#banner h1{
+		font-size: 40px;
+	}
+	#banner p{
+		font-size: 22px;
+	}
+	#brands article:last-child div#wrapper ul.columns, #products article:last-child div#wrapper{
+		display: block;
+		max-height: 200px;
+		overflow: overlay;
+	}
+	#brands article:last-child div#wrapper ul.columns li{
+		border: 0;
+	}
+	#products article:last-child ul, #psale article:last-child div.image{
+		flex: 0;
+		width: 100%;
+	}
+	#psale article:last-child div#wrapper, #contact article:last-child div#wrapper{
+		display: block;
+	}
+	#psale article:last-child div:last-child{
+		width: 100%;
+	}
+	#psale article:last-child div.image img{
+		display: none;
+	}
+	#psale article:last-child div.image{
+		background: url(../img/soldador.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+	#contact article:last-child div#wrapper div{
+		text-align: center;
+		margin: 0 0 30px 0;
+	}
+	#contact article:last-child div#wrapper div:last-child{
+		margin: 0;
+	}
+	footer{
+		padding: 20px;
+	}
+	footer ul{
+		font-size: 13px;
+	}
+}
+@media screen and (max-width: 600px){
+	header{
+		padding: 30px 0 0 0;
+	}
+	input.btncountry{
+	    width: 320px;
+	}
+	ul#menu-country li.select i{
+	    margin: 0 0 0 180px;
+	}
+}
